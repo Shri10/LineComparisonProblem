@@ -64,14 +64,26 @@ namespace LineComparisonProblem
 
             //Checking if Line1 length is same as Line2 length
             Console.WriteLine("\tLength of Line 1: "+length1 + " & Length of Line 2: "+length2 + "\n");
-            if (length1.Equals(length2))
+            if (length1 == length2)
             {
                 Console.WriteLine("\tLine 1 & Line 2 are EQUAL (Based on their Length)");
             }
+            else if (length1 > length2)
+            {
+                Console.WriteLine("\tLength of Line 1 is greater than Line 2.");
+            }
+            else if (length1 < length2)
+            {
+                Console.WriteLine("\tLength of Line 2 is greater than Line 1.");
+            }
             else
+            {
+                Console.WriteLine("This shouldn't be triggered");
+            }
+/*            else
             { 
                 Console.WriteLine("\tLine 1 & Line 2 are NOT EQUAL (Based on their Length)");
-            }
+            }*/
         }
     }
 }
